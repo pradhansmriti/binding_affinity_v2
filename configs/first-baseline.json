@@ -1,0 +1,17 @@
+{
+  "status": "draft_not_executable",
+  "model": "RF-Score-v1",
+  "upstream_commit": "cc363f80a6a696d562f290a87aa20173e60f6c52",
+  "filters": {"train": "CL1 and noncovalent", "val": "CL2 and noncovalent", "test": "CL2 and noncovalent"},
+  "expected_counts": {"train":7393,"val":958,"test":2171},
+  "distance_cutoff_angstrom":12,
+  "distance_operator":"<",
+  "initial_feature_count":81,
+  "feature_filter":"remove all-zero columns using train only",
+  "proposed_seeds":[0,1,2],
+  "author_seeds_recovered":false,
+  "source_fixed_config":{"n_estimators":100,"max_features":3},
+  "source_validation_grid":{"n_estimators":[100,150,200,250,300,350,400,450,500],"max_features":[2,3,4,5,6,7,8,9,10],"random_state":24},
+  "selection_rule":"validation RMSE only; freeze before test",
+  "unresolved":["uploaded paper version", "affinity unit verification", "reported configuration reconciliation", "structure acquisition", "environment lock"]
+}
