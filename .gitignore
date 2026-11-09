@@ -11,3 +11,7 @@ outputs/*-archive-sha256.txt
 runs/
 .ipynb_checkpoints/
 .DS_Store
+
+.conda-env/
+.conda-isolated/
+outputs/descriptors/*.npz

@@ -1,0 +1,8 @@
+{
+  "summary": {
+    "protein_match": 10522,
+    "ligand_match": 10522
+  },
+  "examples": {},
+  "note": "Comparison to pinned notebook readers, not validation of atom types or chemical correctness."
+}

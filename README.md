@@ -38,14 +38,14 @@ platform-specific snapshot of the existing working Python environment are now
 available. See [prerequisite findings](PREREQUISITES.md) for evidence, commands,
 and unresolved paper and source discrepancies. No full baseline has run.
 
-The ordered [next steps](NEXT-STEPS.md) track the remaining baseline prerequisites.
+A 32-training/8-validation smoke run now exercises the source-code RF settings and the documented unit conversion; its numbers are not benchmark results. The smoke run also passes in the recreated isolated environment. Full-cohort descriptor extraction has completed and retains 36 training-derived features, matching the paper’s count; full model training remains pending. The ordered [next steps](NEXT-STEPS.md) track the remaining baseline prerequisites. The [paper–code reconciliation](PAPER-CODE-RECONCILIATION.md) records confirmed differences and open questions.
 
 ## Reproduction and critique
 
-1. **Reproduce.** Generate descriptors across the official cohort and verify
-   the training-only mask against the paper's 36 retained
-   features. Resolve the historical CSV name, label units, and differences between
-   the notebook's validation grid and final fit. Freeze settings and seeds on
+1. **Reproduce.** Use the generated official-cohort descriptors and the
+   training-only mask, which retains the paper’s 36 features. Resolve the
+   historical CSV name, label units, and differences between the notebook’s
+   validation grid and final fit. Freeze settings and seeds on
    validation, then report per-seed predictions and metrics. Use BDB2020+ as the
    external check with the fitted model frozen.
 2. **Audit the claims.** Measure exact and near overlaps in proteins and ligands.

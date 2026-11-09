@@ -51,11 +51,12 @@
     ],
     "random_state": 24
   },
-  "selection_rule": "validation RMSE only; freeze before test",
+  "selection_rule": "Fixed 100/3 baseline: no hyperparameter search. If a separate grid experiment is run, select by validation RMSE only and freeze before test.",
   "unresolved": [
     "uploaded paper version",
     "affinity unit verification",
-    "reported configuration reconciliation",
-    "environment lock"
-  ]
+    "reported configuration reconciliation"
+  ],
+  "source_fixed_config_provenance": "100 trees and max_features=3 appear in the pinned authors’ final RF-Score notebook loop; they are adopted as a source-code baseline, not independently validated by this project or confirmed as the paper’s reported settings.",
+  "source_fixed_config_interpretation": "max_features=3 samples three candidate features at each tree split; it is not a three-feature limit on the entire model."
 }

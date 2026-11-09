@@ -1,6 +1,6 @@
 # LP-PDBBind reproduction project
 
-Created 2026-11-03. Updated 2026-11-09: metadata and label-unit audits completed; a structure-coverage audit and environment snapshot are available. Both v2020 structure archives have since been acquired; all 10,522 selected pairs are present and pass basic parsing. Source-setting reconciliation and baseline execution remain pending. No extension experiments started. See [prerequisite findings](PREREQUISITES.md).
+Created 2026-11-03. Updated 2026-11-09: metadata and label-unit audits completed; a structure-coverage audit and environment snapshot are available. Both v2020 structure archives have since been acquired; all 10,522 selected pairs are present and pass basic parsing. Source-setting reconciliation and full baseline execution remain pending. No extension experiments started. See [prerequisite findings](PREREQUISITES.md).
 
 ## Scope and provenance
 
@@ -92,7 +92,7 @@ Units are a blocking check: inspect `value` provenance and conversion in the pre
 - [x] Acquire PDBBind v2020 structures and verify complete file coverage and basic parsing. Author-prepared structure identity remains unverified.
 - [ ] Verify affinity units, assay handling and parser behavior.
 - [ ] Pin environment and save derived source diff.
-- [ ] Validate feature shapes and training-only preprocessing.
+- [x] Generate 81 descriptors for each selected complex; derive a training-only mask of 36 features. Ten train complexes match the executable notebook for all 81 counts. The source’s inactive 27-index comment differs and its historical actual mask is unavailable.
 - [ ] Complete smoke run, then frozen full baseline.
 - [ ] Save predictions, models, metrics, manifests and resource use.
 - [ ] Reproduce independent benchmark with frozen model.

@@ -8,7 +8,7 @@ The project studies how binding-affinity models generalize to new protein–liga
 - [x] Verify file coverage and basic parsing for the 10,522 selected complexes.
 - [ ] Reconcile the paper version, RF-Score settings, affinity units, and energy conversion.
 - [ ] Establish and verify an isolated environment and complete the derived RF-Score pipeline.
-- [ ] Generate descriptors, validate the training-only feature mask, and run a smoke test.
+- [x] Generate all descriptors, validate the 36-feature training-only mask count, and run a small train/validation smoke test.
 - [ ] Freeze the protocol, run the full baseline, and evaluate the frozen model on the independent BDB2020+ benchmark.
 - [ ] Record discrepancies and limitations before drawing reproduction conclusions.
 

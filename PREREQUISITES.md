@@ -14,7 +14,7 @@ Each root must contain `<pdbid>/<pdbid>_protein.pdb` and `<pdbid>/<pdbid>_ligand
 
 The released CSV `value` equals the PDBbind v2020 refined index's `-logKd/Ki` for all 5,316 IDs in their intersection (exact to the provided decimal precision). For example, 6r8o is 8.22 with `Kd=0.006uM`, consistent with -log10 molar affinity. The RF notebook fits `value` directly, with no conversion in its model cells. This is strong evidence that its native target is p-affinity, not kcal/mol; values including IC50 and inequalities require attention to source assay semantics and are not necessarily thermodynamic Kd values.
 
-The public [arXiv v3 paper](https://arxiv.org/html/2308.09639v3) Table 1 labels RMSE as kcal/mol. For an explicit *illustrative convention* of standard binding free energy at 298.15 K, ΔG = -RT ln(10) × p-affinity, with R = 0.00198720425864083 kcal mol⁻¹ K⁻¹ (factor ≈ -1.36425 kcal/mol per p unit). RMSE scales by the absolute factor; correlations change sign if both predictions and labels are converted to ΔG. The authors' actual conversion convention and temperature have not been verified. Report native p-unit results and separately labelled conversions; do not claim an exact paper comparison until this is reconciled.
+The public [arXiv v3 paper](https://arxiv.org/html/2308.09639v3) Table 1 labels RMSE as kcal/mol. For an explicit *illustrative convention* of standard binding free energy at 298.15 K, ΔG = -RT ln(10) × p-affinity, with R = 0.00198720425864083 kcal mol⁻¹ K⁻¹ (factor ≈ -1.36425 kcal/mol per p unit). RMSE scales by the absolute factor; correlations are unchanged when both predictions and labels are converted consistently; converting only one reverses their sign. The authors' actual conversion convention and temperature have not been verified. Report native p-unit results and separately labelled conversions; do not claim an exact paper comparison until this is reconciled.
 
 ## Settings and paper version
 
@@ -24,7 +24,7 @@ The public arXiv v3 and its embedded supporting information are available as the
 
 ## Environment
 
-The existing local conda `affinity` environment successfully imports Python 3.10.21, NumPy 2.2.6, SciPy 1.15.2, pandas 2.3.3 and scikit-learn 1.7.2. Its full conda explicit package list is recorded in `environment/affinity-osx-arm64-explicit.txt`; it is platform-specific and captures the current environment, not the authors' environment. A fresh recreation and full baseline have not been verified. Create an isolated copy from that file when ready, record its actual versions and run a smoke test before training.
+The existing local conda `affinity` environment successfully imports Python 3.10.21, NumPy 2.2.6, SciPy 1.15.2, pandas 2.3.3 and scikit-learn 1.7.2. Its full conda explicit package list is recorded in `environment/affinity-osx-arm64-explicit.txt`; it is platform-specific and captures the current environment, not the authors' environment. An offline recreation into `.conda-isolated` succeeded with `CONDA_REGISTER_ENVS=false`; Conda issued a nonfatal home-registry warning. Python 3.10.21, NumPy 2.2.6, SciPy 1.15.2, pandas 2.3.3 and scikit-learn 1.7.2 were verified in the new environment. Conversion tests passed, and the 32-train/8-validation smoke output exactly matched the prior environment. The full baseline has not run.
 
 ## General-set archive received (2026-11-09)
 
