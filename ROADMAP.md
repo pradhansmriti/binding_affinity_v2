@@ -1,0 +1,23 @@
+# Binding affinity v2 roadmap
+
+The project studies how binding-affinity models generalize to new protein–ligand complexes. Work is sequenced so the benchmark is reproduced before interpreting proposed extensions. The scope and order of later work can change as evidence emerges.
+
+## Stage 1 — Reproduce LP-PDBBind (current)
+
+- [x] Pin the upstream source, audit metadata, and acquire the original PDBbind v2020 structures.
+- [x] Verify file coverage and basic parsing for the 10,522 selected complexes.
+- [ ] Reconcile the paper version, RF-Score settings, affinity units, and energy conversion.
+- [ ] Establish and verify an isolated environment and complete the derived RF-Score pipeline.
+- [ ] Generate descriptors, validate the training-only feature mask, and run a smoke test.
+- [ ] Freeze the protocol, run the full baseline, and evaluate the frozen model on the independent BDB2020+ benchmark.
+- [ ] Record discrepancies and limitations before drawing reproduction conclusions.
+
+See [next steps](NEXT-STEPS.md), [reproduction notes](REPRODUCTION-NOTES.md), and [prerequisite findings](PREREQUISITES.md) for the detailed protocol and evidence. No benchmark model has been trained yet.
+
+## Stage 2 — Audit generalization and benchmark assumptions
+
+After reviewing Stage 1, prioritize the preserved questions about affinity labels, protein and ligand similarity, novelty measures, chemical selection, and model error. The nine proposed experiments and their original effort/priority ratings are in [the research backlog](DEFERRED-EXTENSIONS.md); all remain unstarted.
+
+## Stage 3 — Test remedies and synthesize findings
+
+For issues supported by Stage 2 evidence, design matched comparisons and quantify uncertainty, performance, and any coverage tradeoffs. Document the original claims, reproduced outcomes, observed discrepancies, and limits of each conclusion. Concrete experiments depend on the earlier results.

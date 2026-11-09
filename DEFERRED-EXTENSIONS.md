@@ -6,7 +6,7 @@ Reproducibility comes first. E00 is the current project phase; E01–E09 are pre
 
 | ID | Research question | Proposed experiment | Effort | Priority | Status |
 |---|---|---|---|---|---|
-| E00 | Can we reproduce the LP-PDBBind paper's reported results? | Confirm paper version and benchmark settings; audit official data; repair and run the RF-Score baseline; compare version-matched metrics, then evaluate the frozen model on the independent benchmark. | To assess | First | Source inspection and metadata audit complete; training pending prerequisites |
+| E00 | Can we reproduce the LP-PDBBind paper's reported results? | Confirm paper version and benchmark settings; audit official data; repair and run the RF-Score baseline; compare version-matched metrics, then evaluate the frozen model on the independent benchmark. | To assess | First | Data acquisition, metadata audit, and basic structure parsing complete; training pending prerequisites |
 
 See [reproduction plan and checklist](README.md) for prerequisites, source issues, and the first-run protocol.
 
