@@ -1,18 +1,18 @@
 # LP-PDBBind reproduction project
 
-Created 2026-11-03. Updated 2026-11-09: metadata and label-unit audits completed; a structure-coverage audit and environment snapshot are available. Both v2020 structure archives have since been acquired; all 10,522 selected pairs are present and pass basic parsing. Source-setting reconciliation and full baseline execution remain pending. No extension experiments started. See [prerequisite findings](PREREQUISITES.md).
+Created 2026-11-03. Updated 2026-11-09: metadata and label-unit audits completed; a structure-coverage audit and environment snapshot are available. Both v2020 structure archives have since been acquired; all 10,522 selected pairs are present and pass basic parsing. Source-setting reconciliation and independent benchmark evaluation remain pending; the fixed internal baseline has run. No extension experiments started. See [prerequisite findings](PREREQUISITES.md).
 
 ## Scope and provenance
 
 Reproduce published scoring results before exploring new hypotheses. Official upstream: https://github.com/THGLab/LP-PDBBind . For a portable checkout, clone upstream into `vendor/LP-PDBBind` (ignored by Git). Inspected commit: `cc363f80a6a696d562f290a87aa20173e60f6c52`. Keep this checkout unmodified; make repairs in a separate derived implementation and record its diff.
 
-The uploaded PDF was not accessible in this chat. The referenced conversation returned only five turns, assistant content-reference placeholders, and no attachments. The exact uploaded paper version remains unresolved. The nine extension descriptions were subsequently recovered from the user and are preserved in `DEFERRED-EXTENSIONS.md`. This project does not claim to have inspected that attachment.
+The uploaded PDF was not accessible in this chat. The referenced conversation returned only five turns, assistant content-reference placeholders, and no attachments. The exact uploaded paper version remains unresolved, but the user selected the peer-reviewed journal article as the target. The nine extension descriptions were subsequently recovered from the user and are preserved in `DEFERRED-EXTENSIONS.md`. This project does not claim to have inspected that attachment.
 
-Inspected public paper: https://arxiv.org/html/2308.09639v3 (10 January 2026), including methods, results Table 1, and supplement outline. Earlier preprint: https://pmc.ncbi.nlm.nih.gov/articles/PMC10462179.1/ . Journal version: https://doi.org/10.1021/acs.jpcb.5c08598 . Do not mix numerical targets from versions. Confirm the user's PDF before declaring reproduction success.
+Inspected public paper: https://arxiv.org/html/2308.09639v3 (10 January 2026), including methods, results Table 1, and supplement outline. Earlier preprint: https://pmc.ncbi.nlm.nih.gov/articles/PMC10462179.1/ . Journal version: https://doi.org/10.1021/acs.jpcb.5c08598 . The peer-reviewed journal article is the selected comparison target. Its accessible [PMC text](https://pmc.ncbi.nlm.nih.gov/articles/PMC13430955/) is an author manuscript; the publisher supporting information was independently reviewed; do not mix unverified details across versions.
 
-## Paper benchmark contract (provisional v3)
+## Paper benchmark contract (peer-reviewed journal article)
 
-Train on CL1 noncovalent complexes; validate and test on CL2 noncovalent complexes. Table 1 reports binding-energy RMSE in kcal/mol over three initializations. Its retrained RF-Score target is train 0.68 ± 0.003, validation 2.14 ± 0.01, test 2.10 ± 0.003. These are provisional reference values, not pass/fail tolerances.
+Train on CL1 noncovalent complexes; validate and test on CL2 noncovalent complexes. Table 1 reports binding-energy RMSE in kcal/mol over three initializations. Its retrained RF-Score target is train 0.68 ± 0.003, validation 2.14 ± 0.01, test 2.10 ± 0.003. These values also appear in the PMC author manuscript; they are reference values, not pass/fail tolerances.
 
 The split controls protein and ligand similarity, rather than relying on time alone. Independent BDB2020+ and target-specific Mpro/EGFR evaluations follow the internal benchmark. Docked-pose evaluation is a separate later reproduction stage.
 
@@ -33,7 +33,7 @@ All paths below are relative to the upstream checkout.
 | IGN instructions/environment/checkpoint | `model_retraining/IGN/` | Training scripts live in upstream https://github.com/zjujdj/InteractionGraphNet.git ; pin separately before using |
 | DeepDTA scripts and checkpoint | `model_retraining/deepdta/` | README documents environment and input schema |
 
-The repository README is an entry point, not a complete executable workflow. No training environment has been installed.
+The upstream README is an entry point, not a complete executable workflow. A separate project environment has been recreated and smoke-tested; the authors’ original environment is not recovered.
 
 ## Completed metadata audit
 
@@ -71,7 +71,7 @@ Source-observed settings: 12 Å strict distance cutoff (`d < 12`); nine atom typ
 
 ### Run sequence
 
-1. Obtain the exact uploaded PDF/supplement and prepared PDBBind v2020 structures. Audit all 10,522 selected complexes against the expected filenames and checksums.
+1. Check the journal supporting information against the earlier arXiv supplement (done). Coverage and checksums for all 10,522 selected structure pairs are complete.
 2. Create an isolated CPU environment with numpy, pandas, scipy, scikit-learn and a notebook reader if needed. Resolve and record exact versions before training; RF-Score README supplies no version lock. Record OS, architecture, Python, CPU and available memory.
 3. Implement the narrow repairs above, retaining a source-to-derived change log. Verify descriptors manually on a few complexes, then smoke-test end-to-end on a small training subset. Smoke metrics are not benchmark results.
 4. Freeze `configs/first-baseline.json`; use three explicit project seeds (0, 1, 2). These are new reproducibility controls, not recovered author seeds.
@@ -83,21 +83,32 @@ Units are a blocking check: inspect `value` provenance and conversion in the pre
 
 ## Reproducibility checklist
 
-- [x] Locate author-owned repository and record exact commit.
-- [x] Inspect RF-Score source and model README instructions.
-- [x] Hash metadata; export selected identifiers and count populations.
-- [x] Verify identifier uniqueness and split disjointness.
-- [ ] Recover uploaded PDF and supplement; hash and identify version.
-- [ ] Reconcile target table, reported repetition count, source loop and hyperparameters.
-- [x] Acquire PDBBind v2020 structures and verify complete file coverage and basic parsing. Author-prepared structure identity remains unverified.
-- [ ] Verify affinity units, assay handling and parser behavior.
-- [ ] Pin environment and save derived source diff.
-- [x] Generate 81 descriptors for each selected complex; derive a training-only mask of 36 features. Ten train complexes match the executable notebook for all 81 counts. The source’s inactive 27-index comment differs and its historical actual mask is unavailable.
-- [ ] Complete smoke run, then frozen full baseline.
-- [ ] Save predictions, models, metrics, manifests and resource use.
-- [ ] Reproduce independent benchmark with frozen model.
-- [ ] Review discrepancies before releasing extension backlog.
+### Completed
+
+- [x] Locate the authors’ repository and pin commit `cc363f80a6a696d562f290a87aa20173e60f6c52`; inspect the RF-Score notebook and README.
+- [x] Hash released metadata, export selected IDs, count the cohorts, and verify ID uniqueness and split disjointness.
+- [x] Inspect public arXiv v3 and its embedded supplement; document Table 1 targets, the notebook’s settings, and discrepancies in [paper–code reconciliation](PAPER-CODE-RECONCILIATION.md).
+- [x] Acquire original PDBbind v2020 structures and verify complete file coverage and basic parsing for all 10,522 selected complexes. Identity with the authors’ prepared structures remains unverified.
+- [x] Establish that the released `value` column matches the refined index’s p-affinity values for all 5,316 overlapping IDs; document the selected cohorts’ assay labels and the authors’ CL1/CL2 rationale.
+- [x] Implement and test the explicitly labeled 298.15 K p-affinity-to-energy-equivalent conversion. The authors’ exact conversion convention remains unconfirmed.
+- [x] Compare author and derived atom-reader outputs for all 10,522 selected protein and ligand pairs.
+- [x] Recreate and verify the project’s recorded environment and run a small end-to-end train/validation smoke test inside it. This is not a recovered author environment or a benchmark result.
+- [x] Generate 81 descriptors for every selected complex and derive a training-only mask of 36 features, matching the paper’s count. For ten training complexes, all 81 counts match the executable notebook. The notebook’s inactive 27-index comment differs; its historical computed mask indices are unavailable.
+
+- [x] Review the publisher journal supporting information against the earlier arXiv RF-Score and cleaning notes; provenance and findings are in [paper–code reconciliation](PAPER-CODE-RECONCILIATION.md).
+
+- [x] Implement the fixed internal training/evaluation pipeline and [source-to-derived change log](RF-SCORE-IMPLEMENTATION.md); require exact IDs.
+
+
+
+
+
+### Still open
+
+- [ ] Recover or reconcile the authors’ actual Table 1 settings, repetition count, software versions, temperature, and unit conversion. The released notebook’s ten unseeded fits and fixed settings do not establish what generated the reported three-run results.
+- [ ] Verify the identity of the downloaded coordinates against the authors’ prepared structures where possible, and investigate the inactive commented mask if further evidence becomes available.
+- [ ] Audit and evaluate the independent BDB2020+ benchmark using the frozen model, then review material discrepancies before starting extensions.
 
 ## Next input needed
 
-Reattach the original paper (and supplement if available) to confirm version-specific targets. The nine earlier experiments have been restored from the user’s supplied backlog in `DEFERRED-EXTENSIONS.md`; all remain deferred. Work completed here remains usable while the paper is recovered.
+The peer-reviewed journal article and its supporting information are the selected references; author settings and conversion remain unresolved. The nine earlier experiments have been restored from the user’s supplied backlog in `DEFERRED-EXTENSIONS.md`; all remain deferred. The independent benchmark and outstanding source discrepancies remain to be investigated.

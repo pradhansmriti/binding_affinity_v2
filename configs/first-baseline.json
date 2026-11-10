@@ -1,5 +1,5 @@
 {
-  "status": "draft_not_executable",
+  "status": "fixed_source_baseline_protocol",
   "model": "RF-Score-v1",
   "upstream_commit": "cc363f80a6a696d562f290a87aa20173e60f6c52",
   "filters": {
@@ -51,12 +51,18 @@
     ],
     "random_state": 24
   },
-  "selection_rule": "Fixed 100/3 baseline: no hyperparameter search. If a separate grid experiment is run, select by validation RMSE only and freeze before test.",
+  "selection_rule": "Fixed 100/3; no hyperparameter or seed selection. Report all three seeds; evaluate every frozen model on test.",
   "unresolved": [
-    "uploaded paper version",
-    "affinity unit verification",
+    "authors’ exact affinity conversion convention and temperature",
     "reported configuration reconciliation"
   ],
   "source_fixed_config_provenance": "100 trees and max_features=3 appear in the pinned authors’ final RF-Score notebook loop; they are adopted as a source-code baseline, not independently validated by this project or confirmed as the paper’s reported settings.",
-  "source_fixed_config_interpretation": "max_features=3 samples three candidate features at each tree split; it is not a three-feature limit on the entire model."
+  "source_fixed_config_interpretation": "max_features=3 samples three candidate features at each tree split; it is not a three-feature limit on the entire model.",
+  "comparison_target": {
+    "publication": "Li et al., Journal of Physical Chemistry B 130 (2026), 730–740",
+    "doi": "10.1021/acs.jpcb.5c08598",
+    "supplement_verified": true,
+    "supplement_sha256": "2c565ab2aa60e94bc750852e60557413c525855dd11269cc9b8248a7e667f1ad"
+  },
+  "standard_deviation": "population standard deviation (ddof=0)"
 }

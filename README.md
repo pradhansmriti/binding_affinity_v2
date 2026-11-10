@@ -23,7 +23,7 @@ confirmed findings, discrepancies, and hypotheses that remain open.
 
 The selected PDBbind v2020 structures have been acquired and audited for file
 coverage and basic parsing. The 7EJK check used the separately released external
-benchmark archive. The public arXiv v3 Table 1 is the provisional comparison target.
+benchmark archive. The comparison target is the peer-reviewed [2026 journal article](https://doi.org/10.1021/acs.jpcb.5c08598), Tables 1 and 2. The accessible [PMC text](https://pmc.ncbi.nlm.nih.gov/articles/PMC13430955/) is an author manuscript; the publisher supporting information has been reviewed.
 Reconcile affinity units, historical sample membership, and RF settings before
 interpreting any numerical discrepancy.
 
@@ -36,9 +36,9 @@ conversion convention must be explicit. Both original PDBbind v2020 structure ar
 coordinate parsing check. A structure-coverage and checksum audit and a
 platform-specific snapshot of the existing working Python environment are now
 available. See [prerequisite findings](PREREQUISITES.md) for evidence, commands,
-and unresolved paper and source discrepancies. No full baseline has run.
+and unresolved paper and source discrepancies. The fixed full-cohort internal baseline has now run; see [baseline results](BASELINE-RESULTS.md).
 
-A 32-training/8-validation smoke run now exercises the source-code RF settings and the documented unit conversion; its numbers are not benchmark results. The smoke run also passes in the recreated isolated environment. Full-cohort descriptor extraction has completed and retains 36 training-derived features, matching the paper’s count; full model training remains pending. The ordered [next steps](NEXT-STEPS.md) track the remaining baseline prerequisites. The [paper–code reconciliation](PAPER-CODE-RECONCILIATION.md) records confirmed differences and open questions.
+A 32-training/8-validation smoke run now exercises the source-code RF settings and the documented unit conversion; its numbers are not benchmark results. The smoke run also passes in the recreated isolated environment. Full-cohort descriptor extraction has completed and retains 36 training-derived features, matching the paper’s count; the full internal baseline has now run. The ordered [next steps](NEXT-STEPS.md) track the remaining baseline prerequisites. The [paper–code reconciliation](PAPER-CODE-RECONCILIATION.md) records confirmed differences and open questions.
 
 ## Reproduction and critique
 
@@ -79,5 +79,5 @@ python3 scripts/rfscore_descriptor.py /path/to/protein.pdb /path/to/ligand.sdf
 ```
 
 The descriptor script uses NumPy and SciPy. Its ligand parser accepts V2000 SDF.
-See the [public paper](https://arxiv.org/html/2308.09639v3) and
+See the [peer-reviewed journal article](https://doi.org/10.1021/acs.jpcb.5c08598) and
 [pinned upstream source](https://github.com/THGLab/LP-PDBBind/tree/cc363f80a6a696d562f290a87aa20173e60f6c52).

@@ -6,7 +6,7 @@ Reproducibility comes first. E00 is the current project phase; E01–E09 are pre
 
 | ID | Research question | Proposed experiment | Effort | Priority | Status |
 |---|---|---|---|---|---|
-| E00 | Can we reproduce the LP-PDBBind paper's reported results? | Confirm paper version and benchmark settings; audit official data; repair and run the RF-Score baseline; compare version-matched metrics, then evaluate the frozen model on the independent benchmark. | To assess | First | Data acquisition, metadata audit, and basic structure parsing complete; training pending prerequisites |
+| E00 | Can we reproduce the LP-PDBBind paper's reported results? | Reconcile benchmark settings with the peer-reviewed journal article and supplement; audit official data; repair and run the RF-Score baseline; compare version-matched metrics, then evaluate the frozen model on the independent benchmark. | To assess | First | Fixed full-cohort internal baseline complete; independent benchmark and discrepancy review pending |
 
 See [reproduction plan and checklist](README.md) for prerequisites, source issues, and the first-run protocol.
 
@@ -24,6 +24,6 @@ See [reproduction plan and checklist](README.md) for prerequisites, source issue
 | E08 | Do interaction fingerprints adequately represent structural similarity? | Compare interaction fingerprints with 3D binding-pocket structural alignment. | High | Medium | Deferred |
 | E09 | Does training neighborhood density affect prediction accuracy? | Analyze error against the number of similar training examples. | Medium | Medium | Deferred |
 
-Release gate: review the version-matched baseline and independent benchmark, resolve material discrepancies, then prioritize extensions with the user. Before E06, establish whether and where QED filtering applies in the selected paper/data version; its inclusion here records a research question, not a verified benchmark assumption.
+Release gate: review the version-matched baseline and independent benchmark, resolve material discrepancies, then prioritize extensions with the user. The peer-reviewed journal supplement specifies ligand QED > 0.2 as a CL1 criterion; before E06, audit how the released flags and selected rows implement it.
 
 Provenance: E01–E09 restored from the user's complete research backlog supplied in this chat. Formatting has been normalized; scientific scope and effort/priority ratings are preserved.

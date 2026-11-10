@@ -1,6 +1,6 @@
 # Paper–code reconciliation: RF-Score
 
-Date: 2026-11-09. Comparison target: [arXiv 2308.09639v3](https://arxiv.org/html/2308.09639v3), dated 2026-01-10, including its embedded supporting information. The [journal article](https://pubmed.ncbi.nlm.nih.gov/41486605/) has DOI 10.1021/acs.jpcb.5c08598; we have not established that the previously uploaded PDF was this version, or independently checked the final journal tables and supplement. The author notebook and metadata are pinned to [upstream commit cc363f80a6a696d562f290a87aa20173e60f6c52](https://github.com/THGLab/LP-PDBBind/tree/cc363f80a6a696d562f290a87aa20173e60f6c52). Notebook cell numbers below are zero-based.
+Comparison target: the peer-reviewed [2026 journal article](https://doi.org/10.1021/acs.jpcb.5c08598), J. Phys. Chem. B 130, 730–740. Tables 1 and 2 were checked against the accessible [PMC author manuscript](https://pmc.ncbi.nlm.nih.gov/articles/PMC13430955/); the publisher supporting information was independently inspected on 2026-11-10 (file `jp5c08598_si_001.pdf`, SHA-256 `2c565ab2aa60e94bc750852e60557413c525855dd11269cc9b8248a7e667f1ad`). Its cleaning and RF-Score descriptions agree in the relevant points with the earlier arXiv v3 review. The author notebook and metadata are pinned to [upstream commit cc363f80a6a696d562f290a87aa20173e60f6c52](https://github.com/THGLab/LP-PDBBind/tree/cc363f80a6a696d562f290a87aa20173e60f6c52). Notebook cell numbers below are zero-based.
 
 ## Evidence and decisions
 
@@ -34,7 +34,7 @@ not settings recovered from the authors.
 
 ## Why CL1 and CL2 differ
 
-ArXiv v3 supplement S1.1 says CL1 was used for training to retain the largest
+The journal supporting information, page S2, says CL1 was used for training to retain the largest
 available dataset. CL2 adds the requirement that labels originate from exact
 `Kd=` or `Ki=` records; the authors use it for validation and test because they
 consider those labels more reliable. Thus the released training cohort includes
@@ -66,6 +66,14 @@ assay types and report native p-unit metrics alongside converted metrics.
 
 ## Comparison target and limits
 
-ArXiv v3 Table 1 reports RF-Score train 0.68 ± 0.003, validation 2.14 ± 0.01 and test 2.10 ± 0.003 kcal/mol; its Table 2 reports BDB2020+ 1.61 ± 0.008 kcal/mol and Pearson 0.51 ± 0.008. These are provisional reference values, not pass/fail thresholds. Do not compare native p-affinity RMSE directly against them. No benchmark model has been trained in this project.
+The journal article's Table 1, as reproduced in the PMC author manuscript, reports RF-Score train 0.68 ± 0.003, validation 2.14 ± 0.01 and test 2.10 ± 0.003 kcal/mol; its Table 2 reports BDB2020+ 1.61 ± 0.008 kcal/mol and Pearson 0.51 ± 0.008. These are comparison values, not pass/fail thresholds. Do not compare native p-affinity RMSE directly against them. The fixed internal baseline has since been evaluated; see [baseline results](BASELINE-RESULTS.md).
 
 The observed source differences do not prove that the authors used the saved notebook unchanged to generate the paper's results. Historical dataset membership, exact prepared coordinates, author software versions, tree settings, seeds, temperature, and conversion remain unresolved. The current environment snapshot is a project environment, not a recovered author environment. Preserve these distinctions in any report.
+
+## Journal supporting information review (2026-11-10)
+
+Pages S1–S2 describe CL1 as requiring ligand QED > 0.2, element-frequency filtering, and a protein–ligand minimum heavy-atom distance between 1.75 and 4 Å; CL2 adds exact Kd or Ki records. Page S5–S6 describes nine elements, 12 Å contacts, and 36 features with nonzero occurrence in training. It does not state the strict boundary convention, forest tree count, max_features, estimator seeds, or software version. The pinned notebook remains the source for the strict cutoff and initial 100/3 configuration.
+
+Page S2 prints ΔG = −RT ln(K) while referring to Kd or Ki, without defining K or stating temperature. If K means a molar dissociation constant in the usual dimensionless standard-state form, the conventional expression uses +RT ln(Kd / 1 M); a minus sign would instead fit an association constant. Do not silently assume the printed symbol or sign resolves the authors’ actual conversion. The notebook unit discrepancy and the project’s explicitly labeled 298.15 K comparison convention remain open.
+
+The journal supplement supports the QED-filtering premise of E06; whether each released flag and selected row implements that criterion still requires a data/code audit.
