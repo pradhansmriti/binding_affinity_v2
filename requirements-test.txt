@@ -1,0 +1,6 @@
+# Portable test dependencies, based on the project's recorded baseline environment.
+# This is not the authors' environment or a complete benchmark lockfile.
+numpy==2.2.6
+scipy==1.15.2
+scikit-learn==1.7.2
+joblib==1.6.0

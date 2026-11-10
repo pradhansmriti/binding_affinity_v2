@@ -81,3 +81,19 @@ python3 scripts/rfscore_descriptor.py /path/to/protein.pdb /path/to/ligand.sdf
 The descriptor script uses NumPy and SciPy. Its ligand parser accepts V2000 SDF.
 See the [peer-reviewed journal article](https://doi.org/10.1021/acs.jpcb.5c08598) and
 [pinned upstream source](https://github.com/THGLab/LP-PDBBind/tree/cc363f80a6a696d562f290a87aa20173e60f6c52).
+
+## Automated tests
+
+GitHub Actions runs the small unit tests on pushes and pull requests using Python
+3.10 and [portable test dependencies](requirements-test.txt). The workflow does
+not download licensed structures or run the full benchmark. To run the same
+tests locally in a Python 3.10 environment:
+
+```sh
+python -m pip install -r requirements-test.txt
+python -m unittest discover -s tests -v
+```
+
+This test dependency list is not the authors' environment or a complete lockfile
+for reproducing the benchmark; the recorded osx-arm64 environment remains the
+reference for the existing run.
