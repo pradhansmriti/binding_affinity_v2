@@ -36,7 +36,7 @@ conversion convention must be explicit. Both original PDBbind v2020 structure ar
 coordinate parsing check. A structure-coverage and checksum audit and a
 platform-specific snapshot of the existing working Python environment are now
 available. See [prerequisite findings](PREREQUISITES.md) for evidence, commands,
-and unresolved paper and source discrepancies. The fixed full-cohort internal baseline has now run; see [baseline results](BASELINE-RESULTS.md).
+and unresolved paper and source discrepancies. The fixed full-cohort internal baseline and BDB2020+ evaluation have now run; see [baseline results](BASELINE-RESULTS.md).
 
 A 32-training/8-validation smoke run now exercises the source-code RF settings and the documented unit conversion; its numbers are not benchmark results. The smoke run also passes in the recreated isolated environment. Full-cohort descriptor extraction has completed and retains 36 training-derived features, matching the paper’s count; the full internal baseline has now run. The ordered [next steps](NEXT-STEPS.md) track the remaining baseline prerequisites. The [paper–code reconciliation](PAPER-CODE-RECONCILIATION.md) records confirmed differences and open questions.
 
@@ -46,8 +46,8 @@ A 32-training/8-validation smoke run now exercises the source-code RF settings a
    training-only mask, which retains the paper’s 36 features. Resolve the
    historical CSV name, label units, and differences between the notebook’s
    validation grid and final fit. Freeze settings and seeds on
-   validation, then report per-seed predictions and metrics. Use BDB2020+ as the
-   external check with the fitted model frozen.
+   validation, then report per-seed predictions and metrics. The frozen models have
+   also been evaluated on BDB2020+; similarity audits remain outstanding.
 2. **Audit the claims.** Measure exact and near overlaps in proteins and ligands.
    Compare the released split with protein-disjoint, scaffold-disjoint, and
    jointly controlled alternatives. Report how error varies with distance to
@@ -65,7 +65,7 @@ A 32-training/8-validation smoke run now exercises the source-code RF settings a
 
 [Reproduction notes](REPRODUCTION-NOTES.md) and the
 [E00–E09 backlog](DEFERRED-EXTENSIONS.md) contain the detailed protocol.
-E01–E09 are follow-ups to E00.
+Independent experiments can proceed alongside the remaining paper-reproduction evaluations.
 
 The upstream metadata and structures are not included in this repository. To
 restore the metadata used by the commands below, clone the pinned upstream

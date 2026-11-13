@@ -1,6 +1,6 @@
 # LP-PDBBind reproduction project
 
-Created 2026-11-03. Updated 2026-11-09: metadata and label-unit audits completed; a structure-coverage audit and environment snapshot are available. Both v2020 structure archives have since been acquired; all 10,522 selected pairs are present and pass basic parsing. Source-setting reconciliation and independent benchmark evaluation remain pending; the fixed internal baseline has run. No extension experiments started. See [prerequisite findings](PREREQUISITES.md).
+Created 2026-11-03. Status updated 2026-11-13: metadata and label-unit audits completed; a structure-coverage audit and environment snapshot are available. Both v2020 structure archives have since been acquired; all 10,522 selected pairs are present and pass basic parsing. Author-setting reconciliation remains pending; the fixed internal and independent benchmarks have run. No extension experiments started. See [prerequisite findings](PREREQUISITES.md).
 
 ## Scope and provenance
 
@@ -24,7 +24,7 @@ All paths below are relative to the upstream checkout.
 |---|---|---|
 | Metadata, labels, split and clean flags | `dataset/LP_PDBBind.csv` | Downloaded and audited |
 | LP-PDBBind protein/ligand structures | https://www.pdbbind.org.cn | Separate PDBBind v2020 acquisition required; repository has metadata only |
-| Independent benchmark structures/metadata | `dataset/BDB2020+.tgz` | Downloaded; not yet extracted/audited |
+| Independent benchmark structures/metadata | `dataset/BDB2020+.tgz` | Downloaded, extracted, and evaluated; see [baseline results](BASELINE-RESULTS.md) |
 | Target benchmarks | `dataset/mpro.tgz`, `dataset/EGFR.tgz` | Downloaded; deferred reproduction stages |
 | Split generation and similarity calculation | `dataset_creation/create_splitting.ipynb`, `calc_similarities.ipynb` | Located; retain released split for first run |
 | Cleaning and dataset construction | `dataset_creation/CL_filters.ipynb`, `prepare_BDB2020+_dataset.ipynb` | Located |
@@ -77,7 +77,7 @@ Source-observed settings: 12 Å strict distance cutoff (`d < 12`); nine atom typ
 4. Freeze `configs/first-baseline.json`; use three explicit project seeds (0, 1, 2). These are new reproducibility controls, not recovered author seeds.
 5. Generate descriptors for the full official population, with no missing samples. Fit using train only; select settings using validation only. Keep test sealed until the configuration and selection rule are recorded.
 6. Report per-seed train/validation/test RMSE and mean/std; add Pearson/Spearman as diagnostics. Export predictions with identifiers, labels and units, plus environment, run command, timings, feature mask, model and config hashes.
-7. Compare to version-matched paper numbers. Investigate differences in population, energy conversion, parsing, versions and model selection before expanding scope. Then reproduce BDB2020+ using the frozen model.
+7. Compare to version-matched paper numbers and investigate differences in population, energy conversion, parsing, versions and model selection. The frozen models have now been evaluated on BDB2020+; independent experiments may proceed alongside remaining reproduction work.
 
 Units are a blocking check: inspect `value` provenance and conversion in the preparation notebooks; confirm sign and kcal/mol conventions against the PDF. Do not infer conversion from column names or convert twice.
 
@@ -107,8 +107,8 @@ Units are a blocking check: inspect `value` provenance and conversion in the pre
 
 - [ ] Recover or reconcile the authors’ actual Table 1 settings, repetition count, software versions, temperature, and unit conversion. The released notebook’s ten unseeded fits and fixed settings do not establish what generated the reported three-run results.
 - [ ] Verify the identity of the downloaded coordinates against the authors’ prepared structures where possible, and investigate the inactive commented mask if further evidence becomes available.
-- [ ] Audit and evaluate the independent BDB2020+ benchmark using the frozen model, then review material discrepancies before starting extensions.
+- [x] Audit and evaluate the independent BDB2020+ benchmark using the frozen models, then review material discrepancies; see [baseline results](BASELINE-RESULTS.md). Similarity and assay provenance remain open.
 
 ## Next input needed
 
-The peer-reviewed journal article and its supporting information are the selected references; author settings and conversion remain unresolved. The nine earlier experiments have been restored from the user’s supplied backlog in `DEFERRED-EXTENSIONS.md`; all remain deferred. The independent benchmark and outstanding source discrepancies remain to be investigated.
+The peer-reviewed journal article and its supporting information are the selected references; author settings and conversion remain unresolved. The independent benchmark has been evaluated locally; author-setting and coordinate discrepancies remain open. Independent experiments may proceed alongside remaining paper evaluations; see the plan in `DEFERRED-EXTENSIONS.md`.
