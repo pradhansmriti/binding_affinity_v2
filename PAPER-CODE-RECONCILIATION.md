@@ -44,6 +44,10 @@ CSV does not by itself establish which alternative measurements were or were not
 available in the literature. Preserve this distinction when interpreting the
 training policy and its coverage–label-quality tradeoff.
 
+### Which measurement becomes the label?
+
+The PDBbind curators described a historical preference order of **Kd > Ki > IC50** when multiple measurement types were available for a complex ([Wang et al., 2015](https://academic.oup.com/bioinformatics/article/31/3/405/2365195)). We have not verified how consistently that rule was applied to the released v2020 cohort or whether the selected measurement is appropriate for each complex.
+
 ## Affinity-to-energy comparison policy
 
 For comparison with Table 1's stated kcal/mol RMSE, keep the original released

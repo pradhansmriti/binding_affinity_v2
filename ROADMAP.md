@@ -2,6 +2,10 @@
 
 The project studies how binding-affinity models generalize to new protein–ligand complexes. Work is sequenced so the benchmark is reproduced before interpreting proposed extensions. The scope and order of later work can change as evidence emerges.
 
+## Reporting principle
+
+When reporting numerical results, especially results based on distributions, include an appropriate plot alongside summary statistics. Choose plots that show the underlying data and relevant variation or uncertainty where practical, and label cohorts, units, and sample sizes. Apply this principle to future benchmark evaluations and experiments.
+
 ## Stage 1 — Reproduce LP-PDBBind (current)
 
 - [x] Pin the upstream source, audit metadata, and acquire the original PDBbind v2020 structures.
@@ -11,6 +15,7 @@ The project studies how binding-affinity models generalize to new protein–liga
 - [x] Complete the fixed RF-Score training and internal evaluation pipeline.
 - [x] Generate all descriptors, validate the 36-feature training-only mask count, and run a small train/validation smoke test.
 - [x] Freeze the fixed protocol and run the full internal baseline.
+- [x] Plot internal-cohort measured labels and predictions for the three seeds.
 - [ ] Audit BDB2020+ and evaluate the frozen models on that independent benchmark.
 - [ ] Record discrepancies and limitations before drawing reproduction conclusions.
 

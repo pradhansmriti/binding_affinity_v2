@@ -13,6 +13,7 @@
 - [x] Generate all 10,522 81-feature descriptors and confirm the training-only mask retains 36 features, matching the paper. Compare all 81 counts with the executable notebook for ten train complexes.
 
 - [x] Review the peer-reviewed journal supporting information against the earlier RF-Score and cleaning notes.
+- [x] Plot internal-cohort label and prediction distributions and measured-versus-predicted affinities; see [baseline results](BASELINE-RESULTS.md).
 
 ## Baseline follow-up
 
@@ -23,7 +24,7 @@
 5. [x] Generate full-cohort descriptors and verify the training-only mask retains the paper’s 36 features. The notebook's inactive 27-index comment differs; its computed 36-feature output agrees in count, but does not expose the historical indices.
 6. [x] Freeze the fixed configuration, seeds and no-selection rule before test evaluation.
 7. [x] Train and report per-seed predictions, metrics, models, manifests, and resource use; see [baseline results](BASELINE-RESULTS.md) for the limited journal comparison.
-8. [ ] Audit BDB2020+ and evaluate the frozen model on that independent benchmark. Review discrepancies before starting E01–E09.
+8. [ ] Audit BDB2020+ and evaluate the frozen models on that independent benchmark. Plot the resulting distributions and predictions, and review discrepancies before starting E01–E09.
 
 Structure-pair presence and parser checks do not prove that the downloaded coordinates match the exact preparations used by the authors. Track that uncertainty during reproduction. The licensed archives and generated per-file audits remain local; regenerate the latter using the scripts and metadata from the pinned upstream source.
 
