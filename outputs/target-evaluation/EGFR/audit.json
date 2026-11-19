@@ -1,0 +1,199 @@
+{
+  "target": "EGFR",
+  "count": 23,
+  "ids": [
+    "2ITP",
+    "2ITZ",
+    "2ITY",
+    "1XKK",
+    "5EDQ",
+    "4ZAU",
+    "4JQ7",
+    "5X26",
+    "4JQ8",
+    "3POZ",
+    "2ITO",
+    "2J6M",
+    "5X27",
+    "3BEL",
+    "2ITT",
+    "5EM8",
+    "1M17",
+    "5XDK",
+    "5UGB",
+    "2JIU",
+    "3W2S",
+    "4JRV",
+    "4JR3"
+  ],
+  "label_columns": [
+    "value"
+  ],
+  "metadata_sha256": "988941efcb7b97159f7a5269e87efea037e61626a8c084a157af3e8a6ab3cbfc",
+  "frozen_manifest_sha256": "f2e69084dd3f77da64f20447d9a79fa05f36debbed0ba1e2d9260fe794911e2a",
+  "script_sha256": "881911eaa219183acb0d8df50bfefaf69b272fc6216453213ab126a7bf2efefd",
+  "archive_sha256": "d898de7455563dbe6f88c584d5d093ad6d7f00cd9bc5c03a96eb8358150c3b76",
+  "internal_id_overlap": {
+    "train": [],
+    "val": [
+      "2ITP",
+      "2J6M",
+      "2JIU"
+    ],
+    "test": [
+      "1XKK",
+      "2ITO",
+      "2ITT",
+      "2ITY",
+      "2ITZ",
+      "5EDQ",
+      "5EM8",
+      "5UGB"
+    ]
+  },
+  "entries": [
+    {
+      "id": "2ITP",
+      "protein_sha256": "63b19de8411524985c2c3516efb253855ecb7711f3a4147203b6d51042a6867c",
+      "ligand_sha256": "449d66ff068e00b4f5b69cc8a54d05ea247c76f24db9b546cad0c41e9221c953",
+      "contacts": 8373
+    },
+    {
+      "id": "2ITZ",
+      "protein_sha256": "e493b4193072e79266350cd3f6624d3303203eda197ba1aa6e6e2464af48c64e",
+      "ligand_sha256": "7c57d8190af2f9c262a27144f3c7e65f121605e8ae5a9e6ecec26c94c8b6aecc",
+      "contacts": 7951
+    },
+    {
+      "id": "2ITY",
+      "protein_sha256": "69aecf359c72a6611cd3c481dbcf5d044812eaa13195563ff6dbc053e4281350",
+      "ligand_sha256": "7c49e874b9ad90da73cb08ff159ee688f6bdab06ac886aaaba72156cfa438113",
+      "contacts": 7587
+    },
+    {
+      "id": "1XKK",
+      "protein_sha256": "24746131a3278c9aa0c578264924126c6c7e1cfd3d5871b5beea0e611953ffe9",
+      "ligand_sha256": "f08a2b492e1a63823fcbe03291ea1ea6ceb433caf75b3323a42ea215402caed2",
+      "contacts": 11365
+    },
+    {
+      "id": "5EDQ",
+      "protein_sha256": "80534a04ed82975fbdf782cdd8edafa5b0a7b9b5949e46b6fda690c578722d6b",
+      "ligand_sha256": "97535eafbb851fa50b63b85cdcbaf8521b565363bbe98e60cf52995b701bbfde",
+      "contacts": 7698
+    },
+    {
+      "id": "4ZAU",
+      "protein_sha256": "695414ba7182fae6c636260e458d77a4b8e2910b890cd0fdf80cb65623194290",
+      "ligand_sha256": "0e90f7d258358308d577915ccfee45631639dd894a66d4db379e35249a6b0fad",
+      "contacts": 7578
+    },
+    {
+      "id": "4JQ7",
+      "protein_sha256": "02781255be29e5e07d0dec6c2b1aa23472e2a181b9b23bd04f8d02e5bd48916d",
+      "ligand_sha256": "cdf5fa2a5c240e6ee3435afd4b82d09ca74f14fd82d8b3f6ee7ab083b2f88d1f",
+      "contacts": 8477
+    },
+    {
+      "id": "5X26",
+      "protein_sha256": "d84df28902dc28d613ae2d3c9579481a7471cf5ef976cf2507b74fec93b3fcd7",
+      "ligand_sha256": "69b9539b100e68728f25d4d89ebb93a23ce3fbfd383e0c0ec6257ae9b893d31e",
+      "contacts": 8207
+    },
+    {
+      "id": "4JQ8",
+      "protein_sha256": "8e2704991685ea2dffe353969c815968004f7b2491359f9809df557a64a73537",
+      "ligand_sha256": "50dc9c2fbc94d1418367c782f04503cece9a5cc78640c1e497c4ccd8b6fed6b0",
+      "contacts": 10324
+    },
+    {
+      "id": "3POZ",
+      "protein_sha256": "de94bf331e16cd0c6e6c81df290a57d4158fc067874f7ab666d2905ff4a43dd8",
+      "ligand_sha256": "e6346d92c0872408547541bcfad215ef77f3f342a60c9495eaa325fa64014256",
+      "contacts": 11324
+    },
+    {
+      "id": "2ITO",
+      "protein_sha256": "0616ec29ec88c280ed0c97be426d6c798bc5c6840f45e3785a7592447f82dcd8",
+      "ligand_sha256": "0ddda6969b52e35ff9315a9880da85fba66a14582d9e81054dace3a7e307ec94",
+      "contacts": 7909
+    },
+    {
+      "id": "2J6M",
+      "protein_sha256": "3a022e1783d39e269fe1ddf58839d57ffe99b99328d576fb7e34936971840ad8",
+      "ligand_sha256": "41677364b90cab847d6fc03f707f043a9f004bba4e211542bb3363873ba21fa3",
+      "contacts": 8158
+    },
+    {
+      "id": "5X27",
+      "protein_sha256": "a4103bcf4cf6ded2e1dac625f35ee17441573275b5103f1b50a83b54967d0f20",
+      "ligand_sha256": "1aa9988dc75e502ca35e72ddd393ffc23d96f699f5fb0a249b59fae641713c43",
+      "contacts": 8708
+    },
+    {
+      "id": "3BEL",
+      "protein_sha256": "0762ac073471c4b1b74bc468464e0964087b2f57a8dc860c06040491eedfa3f9",
+      "ligand_sha256": "112f21c61279ed1e6cf842b6b984f315260733621a3b715cf81d81ec57c10b30",
+      "contacts": 9612
+    },
+    {
+      "id": "2ITT",
+      "protein_sha256": "84b7941d2af794e0de00be3b4314abe9b1321b553d7207b5c04507419ad81765",
+      "ligand_sha256": "e886efc4e9d4843e95ee6fe1974c65a945879c3be2c51edfd307b7f2005948b9",
+      "contacts": 8065
+    },
+    {
+      "id": "5EM8",
+      "protein_sha256": "bef4c23c4075bca9ffc7e878b9b33e980457ac163ddeb61d7f9b68398dd53dfa",
+      "ligand_sha256": "5ea7e1d76d7e116972ffa58597424304a3328cf9535f5fe2fb6e1b13cd3f85f2",
+      "contacts": 7524
+    },
+    {
+      "id": "1M17",
+      "protein_sha256": "99621846757382f42e8a0722dd2c6cd8f2847480a0f3b3ec7e8e7bca637a20bb",
+      "ligand_sha256": "4cb4f31e03fc235e453ef3910c8cd34d2709751d08e602108fb62a4a7847d42c",
+      "contacts": 7427
+    },
+    {
+      "id": "5XDK",
+      "protein_sha256": "c6e2a02590f237b6b1a297c57869c4f2c00786ef5056daf54e75402fa2c97817",
+      "ligand_sha256": "664796ecfdf2dffe4752169f1c2e065a2c135f8f5a34e7413e3bdbf48be9a71e",
+      "contacts": 8519
+    },
+    {
+      "id": "5UGB",
+      "protein_sha256": "24b8f79ad6063fd48ca2032c6299ffb3e5e92471bd93414fe80e8564e7bb09dc",
+      "ligand_sha256": "9790c0635d0b08907cf1590b16cd169147eea66c1602e1e4006354ec30039b76",
+      "contacts": 7906
+    },
+    {
+      "id": "2JIU",
+      "protein_sha256": "e63df48143e5086859f84e5048b819fa88b656ca5d44345e68619601c16d1016",
+      "ligand_sha256": "2ff9e3067126e9fdbf501680bebd0205c0fff041b6d0541eb7d3bb29e75571ae",
+      "contacts": 7933
+    },
+    {
+      "id": "3W2S",
+      "protein_sha256": "edf32f7caffebb717b12a65c08de86cc4b84c5068a9ef91c7f01ad742b9535dc",
+      "ligand_sha256": "6bc17311e10f9aefd154f700345d8d661132531462ea57c87e92060e04b84c51",
+      "contacts": 11611
+    },
+    {
+      "id": "4JRV",
+      "protein_sha256": "a8b9b7674a4ec464b5f1cdc38eb700f51bb9da4a96fb05f4f6d750a3a68ea07e",
+      "ligand_sha256": "2f25ee778b153cf17397444fd8d175816651c36e61dddea83acf7c67b152817b",
+      "contacts": 10506
+    },
+    {
+      "id": "4JR3",
+      "protein_sha256": "07501673d707c1fce22f5592d79a1eaf9e7be1b441a3f037921f92ed645f34cf",
+      "ligand_sha256": "f9e61ddde65783f291845e5fd66882592d4218763cadc099562485877a1f62ee",
+      "contacts": 9385
+    }
+  ],
+  "sklearn_version": "1.7.2",
+  "output_sha256": {
+    "predictions.csv": "ee4eb755fb6a3c500fbf2177f1b9672f691a7271e30f798de4ba5afcad65a6f1",
+    "results.json": "8134305aa390013ccbac9fda3b4cea084a5a10b50a01c3a202407d2606870757"
+  }
+}

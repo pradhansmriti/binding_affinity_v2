@@ -40,6 +40,10 @@ and unresolved paper and source discrepancies. The fixed full-cohort internal ba
 
 A 32-training/8-validation smoke run now exercises the source-code RF settings and the documented unit conversion; its numbers are not benchmark results. The smoke run also passes in the recreated isolated environment. Full-cohort descriptor extraction has completed and retains 36 training-derived features, matching the paper’s count; the full internal baseline has now run. The ordered [next steps](NEXT-STEPS.md) track the remaining baseline prerequisites. The [paper–code reconciliation](PAPER-CODE-RECONCILIATION.md) records confirmed differences and open questions.
 
+## Target-specific evaluation
+
+The frozen RF-Score models have now been evaluated on the released Mpro and EGFR cohorts. The results, overlap audit, and comparison with Table 3 are in [target results](TARGET-RESULTS.md). The paper selected one model on BDB2020+, whereas this evaluation reports all three frozen seeds.
+
 ## Reproduction and critique
 
 1. **Reproduce.** Use the generated official-cohort descriptors and the

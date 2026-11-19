@@ -1,0 +1,82 @@
+{
+  "per_seed": {
+    "pKa_reliable": {
+      "0": {
+        "rmse_p_affinity": 0.9332419397794335,
+        "rmse_energy_equivalent_kcal_mol": 1.273172528782371,
+        "pearson": 0.6640857370621841,
+        "spearman": 0.7261809895058484
+      },
+      "1": {
+        "rmse_p_affinity": 0.8804225327271794,
+        "rmse_energy_equivalent_kcal_mol": 1.2011138104810937,
+        "pearson": 0.7113717809509248,
+        "spearman": 0.7314350121689398
+      },
+      "2": {
+        "rmse_p_affinity": 0.9365286894774156,
+        "rmse_energy_equivalent_kcal_mol": 1.2776564672404342,
+        "pearson": 0.6856384377719341,
+        "spearman": 0.7390345806637686
+      }
+    },
+    "pKa_full": {
+      "0": {
+        "rmse_p_affinity": 0.9332792077934304,
+        "rmse_energy_equivalent_kcal_mol": 1.2732233715591479,
+        "pearson": 0.5997412294644822,
+        "spearman": 0.6833982335349613
+      },
+      "1": {
+        "rmse_p_affinity": 0.8891511624370934,
+        "rmse_energy_equivalent_kcal_mol": 1.2130218174907257,
+        "pearson": 0.6493009550164204,
+        "spearman": 0.6858376011999681
+      },
+      "2": {
+        "rmse_p_affinity": 0.9348281413760627,
+        "rmse_energy_equivalent_kcal_mol": 1.2753364995726424,
+        "pearson": 0.6254811468228503,
+        "spearman": 0.700379985356739
+      }
+    }
+  },
+  "aggregate": {
+    "pKa_reliable": {
+      "rmse_p_affinity": {
+        "mean": 0.9167310539946761,
+        "std_population": 0.025709041449374644
+      },
+      "rmse_energy_equivalent_kcal_mol": {
+        "mean": 1.2506476021679662,
+        "std_population": 0.03507348300528281
+      },
+      "pearson": {
+        "mean": 0.687031985261681,
+        "std_population": 0.019329579537013777
+      },
+      "spearman": {
+        "mean": 0.732216860779519,
+        "std_population": 0.005276499272000918
+      }
+    },
+    "pKa_full": {
+      "rmse_p_affinity": {
+        "mean": 0.9190861705355289,
+        "std_population": 0.02117669050632322
+      },
+      "rmse_energy_equivalent_kcal_mol": {
+        "mean": 1.253860562874172,
+        "std_population": 0.028890236769201938
+      },
+      "pearson": {
+        "mean": 0.6248411104345842,
+        "std_population": 0.020237734295610398
+      },
+      "spearman": {
+        "mean": 0.6898719400305561,
+        "std_population": 0.007496750010687072
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ All paths below are relative to the upstream checkout.
 | Metadata, labels, split and clean flags | `dataset/LP_PDBBind.csv` | Downloaded and audited |
 | LP-PDBBind protein/ligand structures | https://www.pdbbind.org.cn | Separate PDBBind v2020 acquisition required; repository has metadata only |
 | Independent benchmark structures/metadata | `dataset/BDB2020+.tgz` | Downloaded, extracted, and evaluated; see [baseline results](BASELINE-RESULTS.md) |
-| Target benchmarks | `dataset/mpro.tgz`, `dataset/EGFR.tgz` | Downloaded; deferred reproduction stages |
+| Target benchmarks | `dataset/mpro.tgz`, `dataset/EGFR.tgz` | Frozen RF-Score models evaluated; see [target results](TARGET-RESULTS.md) |
 | Split generation and similarity calculation | `dataset_creation/create_splitting.ipynb`, `calc_similarities.ipynb` | Located; retain released split for first run |
 | Cleaning and dataset construction | `dataset_creation/CL_filters.ipynb`, `prepare_BDB2020+_dataset.ipynb` | Located |
 | RF-Score implementation | `model_retraining/RFScore/RF_Score.ipynb` | Source inspected; repairs required |

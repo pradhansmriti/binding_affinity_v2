@@ -1,0 +1,306 @@
+{
+  "target": "mpro",
+  "count": 40,
+  "ids": [
+    "7VTH",
+    "7VU6",
+    "6W63",
+    "7L0D",
+    "6M2N",
+    "7JU7",
+    "7KX5",
+    "7L10",
+    "7L11",
+    "7L12",
+    "7L13",
+    "7L14",
+    "7S3S",
+    "7S3K",
+    "7S4B",
+    "7M8X",
+    "7M8M",
+    "7M8Z",
+    "7M8Y",
+    "7M8N",
+    "7M8O",
+    "7M90",
+    "7M91",
+    "7M8P",
+    "7N44",
+    "7EN8",
+    "7EN9",
+    "7LTJ",
+    "7RLS",
+    "7RM2",
+    "7RMB",
+    "7RME",
+    "7RMT",
+    "7RMZ",
+    "7RN4",
+    "8ACD",
+    "8ACL",
+    "7LME",
+    "7LMD",
+    "7LMF"
+  ],
+  "label_columns": [
+    "pKa_reliable",
+    "pKa_full"
+  ],
+  "metadata_sha256": "08db8ca24bbdbb19f65632b2852752f93a65a0ded5dea917f8d33946f6171e03",
+  "frozen_manifest_sha256": "f2e69084dd3f77da64f20447d9a79fa05f36debbed0ba1e2d9260fe794911e2a",
+  "script_sha256": "881911eaa219183acb0d8df50bfefaf69b272fc6216453213ab126a7bf2efefd",
+  "archive_sha256": "09315d5424a25f01c83b6b215a57eb2ed6caafe7b5beb18b9b92762e9ef020d0",
+  "internal_id_overlap": {
+    "train": [],
+    "val": [],
+    "test": []
+  },
+  "entries": [
+    {
+      "id": "7VTH",
+      "protein_sha256": "d9a5927c9af75a719077cf42835386334a10f324865b64d0fedd677d9e7d2a13",
+      "ligand_sha256": "68039331ba4bc9184467dd9708a2e5f8cbf95a805355a48076efbdb5f5f521fb",
+      "contacts": 8744
+    },
+    {
+      "id": "7VU6",
+      "protein_sha256": "3b489a360b75b7d5ddc80420c3eabf84e2f32e0fd6e36acf1bbf869b779b9b09",
+      "ligand_sha256": "fc097fc9574665a589e770547c6f7d299285404b3297adb75b0bf7f4dd2a71af",
+      "contacts": 9320
+    },
+    {
+      "id": "6W63",
+      "protein_sha256": "1e36ca8e670a57d4921a5c2fc0ea8d3256738be31537cbba119ab2573a9b71ea",
+      "ligand_sha256": "ea91877cb3d9fc406c0b6bc391c823a9a830831e7e8960f45384ca002d766155",
+      "contacts": 8031
+    },
+    {
+      "id": "7L0D",
+      "protein_sha256": "a1a72ea6518c1d79cdbbce572df74445203f7b20f6de3516a8facce49a91f8b1",
+      "ligand_sha256": "c5aa0468be341a4e8a52909eb185c685db092c76106288df5ebc512eceab919f",
+      "contacts": 7618
+    },
+    {
+      "id": "6M2N",
+      "protein_sha256": "7a457eaca64cca6d623f4d77e1d7a9ca71f6ab605268eb6d4bc57e9bbce40c62",
+      "ligand_sha256": "f6dbafd3b07d61d5fe08875be72ed23fc304887710cfa67586e03e63199d1590",
+      "contacts": 5241
+    },
+    {
+      "id": "7JU7",
+      "protein_sha256": "0fc6746bc89f684b510cf090419933e5db30840fd73c50e31008c5eed3602d63",
+      "ligand_sha256": "338d358b9c3467a5d647036e9cb21ee6d2b7da0f40852e2248a49245acee7230",
+      "contacts": 7251
+    },
+    {
+      "id": "7KX5",
+      "protein_sha256": "0666f663075bd587d1a3b2aa9c6f66a8d6245f011546b5526361149460ce202c",
+      "ligand_sha256": "36a3d01bb9cb7399b293b70cee8e44594749a846f165901aba22d8e15f255cc1",
+      "contacts": 9398
+    },
+    {
+      "id": "7L10",
+      "protein_sha256": "02bb9bcc9ffe06c375170277f311f4bf1eaf94f5bb1addf0a0447da9eb559d0f",
+      "ligand_sha256": "13107e15f525a01af817ce30dccd686aaa5d7f53ae8194f47646008ba2aaf957",
+      "contacts": 7173
+    },
+    {
+      "id": "7L11",
+      "protein_sha256": "ed9717cd7fae4ada11db13a3ffda34e7f2b7493030e3137854618d7986cbd302",
+      "ligand_sha256": "07b8bd198b9974db244f3f2397434e73fc35f5fdb6184c184573a749f16959d5",
+      "contacts": 7849
+    },
+    {
+      "id": "7L12",
+      "protein_sha256": "47a0698e2f145c497e219e6da26703e6cd5d735d3aa0d65a3e9d4d5ccabbc7ef",
+      "ligand_sha256": "ea51ef62552fecd584570bc6e78536560f46296e4ffc706874b99710c5a87e23",
+      "contacts": 8676
+    },
+    {
+      "id": "7L13",
+      "protein_sha256": "52799bdb5ddc18e2ae4e0c982911d778b48d21cc82a59efc0b8727ab7ac00070",
+      "ligand_sha256": "90cbec13527b22eb9591806450dc0a44bcd2c34fbbf3c05d6aa5584f2446639f",
+      "contacts": 8589
+    },
+    {
+      "id": "7L14",
+      "protein_sha256": "47c8f8dbc7a7b2fd6cb85d897e6a903f679224f6f26a63503dd7e1e97707f7f1",
+      "ligand_sha256": "fe4e8073542ad1e93f21247c701ecae9404207fdfdf2b86ae3cc3135bcbc36ed",
+      "contacts": 7921
+    },
+    {
+      "id": "7S3S",
+      "protein_sha256": "49d91c4e8b5c109ac0c3fa26df5329e520b5e204d3e796524e6556960fc830fb",
+      "ligand_sha256": "86e0937993a8442fb09e1ddd76778211598b1209cbba3c696b627b74550754e4",
+      "contacts": 4968
+    },
+    {
+      "id": "7S3K",
+      "protein_sha256": "25f74dd56acd4bc9ac688cf23903cbbebc7055201686dcc8b57019c65824b9c0",
+      "ligand_sha256": "07367cc24c9af44ac49d20186eea89c0fe9df649038ca00d88a8f86027976bb7",
+      "contacts": 5440
+    },
+    {
+      "id": "7S4B",
+      "protein_sha256": "6d5f704e92fd941d78d8dec70b941ba7c5228ec182d5610f113bcb42fcc3107d",
+      "ligand_sha256": "0a77f67db045ce10358867c791e52b1ffad86d437686918f9de531036f3bd5fd",
+      "contacts": 5377
+    },
+    {
+      "id": "7M8X",
+      "protein_sha256": "75d67fde37f8506c9b94c9352a95de2c4ec8ba21ee473fe7849fdf10504c4281",
+      "ligand_sha256": "6da58680f566d08d755950f447a73bf034e4dd15596f11b68eeccc184fff6056",
+      "contacts": 8126
+    },
+    {
+      "id": "7M8M",
+      "protein_sha256": "e5dc14fbdf4920082febb273e6930535f0da4ffdc76769c732b9672a8f69f0fc",
+      "ligand_sha256": "af362379d270579468ae5caa7b1b2e43cc59a99ef1d3168599d367015d50af13",
+      "contacts": 7745
+    },
+    {
+      "id": "7M8Z",
+      "protein_sha256": "cf1d631e9db5d72986f463c3c6f631b0066fa675357bcfbe1a65edf3cb52039c",
+      "ligand_sha256": "94e3f0e10807ccc8485981b758f97c76bcdb605d89a428cac03c38d0c8dd5b6d",
+      "contacts": 8407
+    },
+    {
+      "id": "7M8Y",
+      "protein_sha256": "b3bafb42404b47633b8e5565034b9943cd873aa2ca5903e2de0661453b86be7a",
+      "ligand_sha256": "9b33b2b571984f9261060eef918de9dfed4a06afbc9c7cefa7ff06c89a4ece7c",
+      "contacts": 8602
+    },
+    {
+      "id": "7M8N",
+      "protein_sha256": "4f5c8caef391570ec027fa5e4874789ce97b9d4115982232f734b64a06211ad8",
+      "ligand_sha256": "1c3023c7e5b6e32a4091f197f7f4deb6e8ad43718cb8c53eecb91f9731b10f31",
+      "contacts": 8678
+    },
+    {
+      "id": "7M8O",
+      "protein_sha256": "c66d04776b331db43f8c03563f3f2ff25323900ec822d21d9e52ce0dbd0adf64",
+      "ligand_sha256": "a5ffa77590a66482fc34e6e9e9bb626e13d4d7eaf251d4013e3447fe96660287",
+      "contacts": 8592
+    },
+    {
+      "id": "7M90",
+      "protein_sha256": "fd929dfdcefcdd45fecea0bc79c2d1d6f490f719345e67f396ff64b5d5611c1f",
+      "ligand_sha256": "3419e8d38c6b6b0cb045710af24b30c17fd34ea33391881b9f723b47ab962e3f",
+      "contacts": 8864
+    },
+    {
+      "id": "7M91",
+      "protein_sha256": "f2474c2b664488287ccf99a419b16d3acc2202f7e8ae195217ce552640c26f49",
+      "ligand_sha256": "2ff5f12c3c6d7d911856a194c792f16ae1985040537995af97b506e00d57e711",
+      "contacts": 8391
+    },
+    {
+      "id": "7M8P",
+      "protein_sha256": "bd14e2e0c6df5a166b0c65cf974b6faf4da7b7273826678670936f09f619ca83",
+      "ligand_sha256": "09dd8f6163d3dce494eb27205a5cada1155df2445cd122c825e5a4e414bfcc6a",
+      "contacts": 8752
+    },
+    {
+      "id": "7N44",
+      "protein_sha256": "cb571f1ca42f6e33c50f9a0bdefb819b0409a358dbbf3193ab0dd3d38a5491f0",
+      "ligand_sha256": "6cee5476b671364702ecbc36e4181c7dd1aa153bee23069b814c2712d4515856",
+      "contacts": 8897
+    },
+    {
+      "id": "7EN8",
+      "protein_sha256": "ec1793dbe2bd6ebdb4e9dc79a440607b53db90561307ab6a56ab6729c0ec3a4a",
+      "ligand_sha256": "2539af19c0a226c348776f94be1b3456a1a7ad8eef32944447430879aa255c89",
+      "contacts": 7872
+    },
+    {
+      "id": "7EN9",
+      "protein_sha256": "c935ca88dd86b1f80d3d8b7ef7f10c3e8d70ca9f4106679e7d36d8054e56ac80",
+      "ligand_sha256": "f7f8ca79935d7c9ce8a2da36d268c140d4c2087946e22691887f9885d11ec648",
+      "contacts": 9349
+    },
+    {
+      "id": "7LTJ",
+      "protein_sha256": "ca0b41cfc0845434359a07daad96bda7886adfb369fd8ad4ff7a534037105195",
+      "ligand_sha256": "3c1b3aa88ab7de5201544c3132272a1f8becedb04344defc87bc8485c51ba5a9",
+      "contacts": 5649
+    },
+    {
+      "id": "7RLS",
+      "protein_sha256": "6b0c408a7c1abe70422c7cdfd0b5751a966610e874ad6fc527dae8c06c9e030b",
+      "ligand_sha256": "42cb30abac3b1777acb133f3135782d28ec4fa8179a8b63512458ef25395bedf",
+      "contacts": 5833
+    },
+    {
+      "id": "7RM2",
+      "protein_sha256": "3e739e0ab183bfd112249b46422b3f59f01b0ed7fafec37069b72766d744292a",
+      "ligand_sha256": "893313ad9350feaaadd1b2a6cbb4781eeb0fe1d0a1717f80b45d9312f8bb6c6a",
+      "contacts": 5870
+    },
+    {
+      "id": "7RMB",
+      "protein_sha256": "427997ca54cb9b6960bf2173e55881be344d3b5acc076995949194475665fdbf",
+      "ligand_sha256": "dc6f814a14339b47efcef80dcb9025d89adda5ada9e7df66ecf5c671f2c8241a",
+      "contacts": 5637
+    },
+    {
+      "id": "7RME",
+      "protein_sha256": "71cd2738b58e3205332d69554b6df69f2abde83c43776a529c8f933240f39cc8",
+      "ligand_sha256": "6fe9a060190c9bd0ba8bc8b7ca5767cc232569298c75700d27b36d25cd78a18f",
+      "contacts": 6271
+    },
+    {
+      "id": "7RMT",
+      "protein_sha256": "51f15885d569ed4e4b62051abf2ef7956e03dfaa8111309fb7175b6ae18af9f5",
+      "ligand_sha256": "f707c411cf8f1b94ae085da2fe7e17462ee0d7cb070cf4cd2e4b1856e93351f9",
+      "contacts": 5960
+    },
+    {
+      "id": "7RMZ",
+      "protein_sha256": "8b5739a8679c4a18781588fdb0d23645390f3db4d6ccc317f675cfcf508cf636",
+      "ligand_sha256": "bd1b24c95418d03bbc4e0213dfa82849abd9dae619f195494dcf5edb5128d1fb",
+      "contacts": 6298
+    },
+    {
+      "id": "7RN4",
+      "protein_sha256": "65e036e087b7a09ab27c33032f58e4410ec7fcdee234d777977b2948059433db",
+      "ligand_sha256": "67769dec6f18916f10b24bd149e78d9c096eda512fa0049227af9f8c6d7ebc70",
+      "contacts": 5630
+    },
+    {
+      "id": "8ACD",
+      "protein_sha256": "6fd80e5eb1feb03b3f2858b2c86145c6e01ab1d2b84e2eb300b39d12630c620f",
+      "ligand_sha256": "bc90581bff590f629e375ebf034cd014ababc93997b8a799a2b2ab236c40be34",
+      "contacts": 7643
+    },
+    {
+      "id": "8ACL",
+      "protein_sha256": "47a22bb158a7beedb6bfa62ec721bce5b22fcb752618b14b4a83a880446f0949",
+      "ligand_sha256": "e9e0cbe48f9e77d21cd66ceb5efb4c9978490fcd080523648279e72c05dfec5c",
+      "contacts": 7302
+    },
+    {
+      "id": "7LME",
+      "protein_sha256": "d9e9eaf6d2b9f55c365f4943ca325acd56b69449e10b5c2f6acb2b3e774c08db",
+      "ligand_sha256": "746d1c76db2d5d9309ca08c5138b385f04aaa116e05bbfba61039858be1c823d",
+      "contacts": 7249
+    },
+    {
+      "id": "7LMD",
+      "protein_sha256": "f31224db466089c593c61481404e3e0d4214e64dfe9d287687d894186e80840e",
+      "ligand_sha256": "d340e7f028e54532fcc12a637ee5dfd1cf797075a6467c7237adac9b6064b200",
+      "contacts": 7211
+    },
+    {
+      "id": "7LMF",
+      "protein_sha256": "83ad450de37b6dd4b12426d64f274877ae3386bff7b154ad2bd1ffeed4bf8262",
+      "ligand_sha256": "1d34bd3c86797a369781ea81500862f5929472f0bb627612d9ee0399b6b240ea",
+      "contacts": 7220
+    }
+  ],
+  "sklearn_version": "1.7.2",
+  "output_sha256": {
+    "predictions.csv": "2fcbce1282e955e649a60edaa3ea8a47da06b1fb67919b6c2161052b77b05314",
+    "results.json": "882a3de6437bfe15b64efb2de6b90a5da9c057b1932ff90aca0c4c60ab42f203"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "per_seed": {
+    "value": {
+      "0": {
+        "rmse_p_affinity": 0.7649047437142232,
+        "rmse_energy_equivalent_kcal_mol": 1.0435190118678488,
+        "pearson": 0.35879596418963866,
+        "spearman": 0.2663701588607815
+      },
+      "1": {
+        "rmse_p_affinity": 0.7671122861519151,
+        "rmse_energy_equivalent_kcal_mol": 1.0465306450446161,
+        "pearson": 0.36487666393440055,
+        "spearman": 0.35532494289592187
+      },
+      "2": {
+        "rmse_p_affinity": 0.7286115049993322,
+        "rmse_energy_equivalent_kcal_mol": 0.9940060693577202,
+        "pearson": 0.48809452211939786,
+        "spearman": 0.45169262560065737
+      }
+    }
+  },
+  "aggregate": {
+    "value": {
+      "rmse_p_affinity": {
+        "mean": 0.7535428449551569,
+        "std_population": 0.017652140472630598
+      },
+      "rmse_energy_equivalent_kcal_mol": {
+        "mean": 1.028018575423395,
+        "std_population": 0.024081879913447065
+      },
+      "pearson": {
+        "mean": 0.403922383414479,
+        "std_population": 0.059570436895978074
+      },
+      "spearman": {
+        "mean": 0.3577959091191203,
+        "std_population": 0.07567775289649853
+      }
+    }
+  }
+}

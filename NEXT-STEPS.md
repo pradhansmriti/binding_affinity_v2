@@ -15,6 +15,8 @@
 - [x] Review the peer-reviewed journal supporting information against the earlier RF-Score and cleaning notes.
 - [x] Plot internal-cohort label and prediction distributions and measured-versus-predicted affinities; see [baseline results](BASELINE-RESULTS.md).
 
+The frozen RF-Score models have also been evaluated on Mpro and EGFR; see [target results](TARGET-RESULTS.md). Further model and docked-pose evaluations remain open.
+
 ## Baseline follow-up
 
 1. [ ] If possible, recover the authors’ actual Table 1 settings, repetitions, and unit convention. The journal supporting information has been reviewed; it does not resolve the forest settings or temperature, and its printed energy formula leaves the meaning of K unclear.
