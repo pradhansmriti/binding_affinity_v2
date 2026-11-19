@@ -44,6 +44,8 @@ A 32-training/8-validation smoke run now exercises the source-code RF settings a
 
 The frozen RF-Score models have now been evaluated on the released Mpro and EGFR cohorts. The results, overlap audit, and comparison with Table 3 are in [target results](TARGET-RESULTS.md). The paper selected one model on BDB2020+, whereas this evaluation reports all three frozen seeds.
 
+The current status and restart point are in the [reproduction checklist](REPRODUCTION-CHECKLIST.md).
+
 ## Reproduction and critique
 
 1. **Reproduce.** Use the generated official-cohort descriptors and the
