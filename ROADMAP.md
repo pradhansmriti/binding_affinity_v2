@@ -19,6 +19,7 @@ When reporting numerical results, especially results based on distributions, inc
 - [x] Audit BDB2020+ and evaluate the frozen models on that independent benchmark.
 - [x] Evaluate frozen RF-Score models on the released Mpro and EGFR cohorts; document the overlap audit and protocol differences in [target results](TARGET-RESULTS.md).
 - [x] Record discrepancies and limitations before drawing reproduction conclusions.
+- [ ] Complete the remaining model and docked-pose evaluations. The [DeepDTA checkpoint evaluation](deepdta-results.md), [IGN smoke test](ign-REPRODUCTION.md), and [Vina investigation](VINA-INVESTIGATION.md) are partial results; see the [checklist](REPRODUCTION-CHECKLIST.md).
 
 See [next steps](NEXT-STEPS.md), [reproduction notes](REPRODUCTION-NOTES.md), and [prerequisite findings](PREREQUISITES.md) for the detailed protocol and evidence. The internal baseline results are in [baseline results](BASELINE-RESULTS.md); the independent benchmark results are included there.
 

@@ -1,0 +1,20 @@
+{
+  "BDB2020+": {
+    "evaluated_count": 114,
+    "excluded": [
+      {
+        "id": "7NA3",
+        "reasons": [
+          "unknown protein token:  "
+        ]
+      }
+    ],
+    "input_count": 115,
+    "label_mean": 7.595532465981073,
+    "pearson": 0.06094981266009139,
+    "prediction_mean": 7.950572611992819,
+    "rmse_298k_energy_equivalent_if_p_affinity": 2.1617875758320144,
+    "rmse_assuming_prediction_p_affinity": 1.5846012883988958,
+    "spearman": 0.043067239705295225
+  }
+}

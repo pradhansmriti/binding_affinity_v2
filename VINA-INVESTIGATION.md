@@ -1,0 +1,21 @@
+# AutoDock Vina reproduction investigation
+
+## Status
+
+No Vina benchmark result has been reproduced. The pinned author source expects a Vina binary, Meeko ligand preparation, ADFR receptor preparation and configured paths. A temporary conda-forge environment was created at `/private/tmp/lp-vina-conda` with Vina 1.2.7 and Meeko 0.8.0; the paper specifies Vina 1.2.3, which was not available from conda-forge for osx-arm64. An initial pip installation of Vina failed to build because Boost headers were not found. These dependencies and outputs are temporary and not part of the reproducible project environment.
+
+For a nonbenchmark smoke check, the 7EJK BDB2020+ SDF was hydrogenated with RDKit and Meeko generated a ligand PDBQT successfully. Meeko receptor preparation, an alternative to the source's ADFR method, failed template matching for residues R:408 and R:411. They are approximately 8.44 Å and 9.64 Å, respectively, from a ligand atom; simply deleting them would modify the binding environment and was not done. No score was calculated. Meeko receptor preparation differs from the author's ADFR workflow and its behavior must not be silently treated as equivalent.
+
+## Model and reported comparisons
+
+AutoDock Vina is a physics-inspired empirical scoring function combining short-range attraction, steric repulsion, hydrophobic contacts, hydrogen bonding, and ligand torsional penalty. It also performs docking; the scoring evaluation uses an input pose. RF-Score instead learns a random forest from protein–ligand atom-pair contact counts within 12 Å. Vina's few interpretable terms and explicit distance dependence can be efficient and useful for pose-based docking; its approximate energy terms, simplified receptor and solvation treatment, and preparation sensitivity limit quantitative binding affinity accuracy. RF-Score learns nonlinear relations and benefits from data but depends on training coverage and its 12 Å counts discard contact distances and chemistry beyond elemental identity. Both require a suitable three-dimensional complex for these comparisons.
+
+The journal article reports retrained Vina internal test RMSE 2.56 kcal/mol, versus its RF-Score 2.10; our RF-Score test mean is 2.1167 ± 0.0102 energy-equivalent kcal/mol. On BDB2020+, the article reports Vina RMSE 2.10 and Pearson 0.29, versus RF-Score 1.61 and 0.51; our RF-Score is 1.6491 ± 0.0282 and 0.4905 ± 0.0094. These are comparisons of published Vina numbers against our RF reference, not paired project Vina results. The project RF conversion uses 298.15 K, and the authors' exact metric conversion remains unresolved.
+
+On Mpro the paper gives Vina 1.17 kcal/mol, Pearson 0.66, Spearman 0.68; on EGFR it gives 1.59, 0.38, 0.36. Its corresponding RF-Score target results are 1.64 / 0.52 / 0.58 and 0.97 / 0.52 / 0.45. The paper used one selected model in those target results. See [target results](TARGET-RESULTS.md) for our own RF results and qualifications.
+
+## Unresolved protocol details and next work
+
+The pinned `vina_reweight.py` reads obsolete data paths, prepares ligands with Meeko and proteins with ADFR, and optimizes five weights under a nonnegative repulsion bound, then appends the fixed rotational weight 0.05846. The accessible [arXiv v3 supplement](https://arxiv.org/html/2308.09639v3) describes optimizing six terms. This is an author-clarification question; the saved code does not prove it generated the article's results. The paper supplement lists retrained weights, but these should be checked against the journal supplement and the scoring implementation's interpretation before being applied. The Vina binary versions and receptor/ligand preparation methods can alter predictions.
+
+To proceed, recover compatible Vina 1.2.3 and ADFR (or explicitly validate alternatives on representative proteins), compare prepared PDBQT atoms and charges with the authors' method, test scoring and each component, then process the complete predeclared cohorts with a failure manifest. Freeze the label conversion, published-weight and training protocols before test evaluation, report all failures and do not silently drop hard structures. The preliminary 7EJK Meeko failure shows that simple bulk preparation is not yet validated.

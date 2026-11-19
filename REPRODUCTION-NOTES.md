@@ -30,8 +30,8 @@ All paths below are relative to the upstream checkout.
 | Cleaning and dataset construction | `dataset_creation/CL_filters.ipynb`, `prepare_BDB2020+_dataset.ipynb` | Located |
 | RF-Score implementation | `model_retraining/RFScore/RF_Score.ipynb` | Source inspected; repairs required |
 | Vina implementation | `model_retraining/vina/` | README requires Vina, Meeko, ADFR and configurable paths |
-| IGN instructions/environment/checkpoint | `model_retraining/IGN/` | Training scripts live in upstream https://github.com/zjujdj/InteractionGraphNet.git ; pin separately before using |
-| DeepDTA scripts and checkpoint | `model_retraining/deepdta/` | README documents environment and input schema |
+| IGN instructions/environment/checkpoint | `model_retraining/IGN/` | Upstream source has been pinned for a checkpoint smoke test; benchmark preprocessing remains open; see [IGN investigation](ign-REPRODUCTION.md) |
+| DeepDTA scripts and checkpoint | `model_retraining/deepdta/` | Released checkpoint evaluated on selected cohorts; see [DeepDTA results](deepdta-results.md) |
 
 The upstream README is an entry point, not a complete executable workflow. A separate project environment has been recreated and smoke-tested; the authors’ original environment is not recovered.
 

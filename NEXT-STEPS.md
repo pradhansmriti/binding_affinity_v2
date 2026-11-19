@@ -15,7 +15,7 @@
 - [x] Review the peer-reviewed journal supporting information against the earlier RF-Score and cleaning notes.
 - [x] Plot internal-cohort label and prediction distributions and measured-versus-predicted affinities; see [baseline results](BASELINE-RESULTS.md).
 
-The frozen RF-Score models have also been evaluated on Mpro and EGFR; see [target results](TARGET-RESULTS.md). Further model and docked-pose evaluations remain open.
+The frozen RF-Score models have also been evaluated on Mpro and EGFR; see [target results](TARGET-RESULTS.md). A DeepDTA checkpoint evaluation and preliminary IGN and Vina work have since begun; full model and docked-pose evaluations remain open. See the [reproduction checklist](REPRODUCTION-CHECKLIST.md).
 
 ## Baseline follow-up
 

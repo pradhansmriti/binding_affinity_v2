@@ -1,0 +1,27 @@
+{
+  "input_sha256": {
+    "bdb": "9c1aa1e8e32852a267bf2bfa1955bd88347aae3474e2da54e9011bac73e8fe7a",
+    "metadata": "7bb4e54e66c0c58ab74263edb8c2a2d677c2474cfc4ae4dec1eb31a231b10f8a",
+    "test_descriptors": "0ee43071d2d811c2f5b9d5b55ca6909caf0efd92598c59682fc3f119d93f0dca",
+    "train_descriptors": "8a250eea5b4368a4b38913cde7253af14087b46e3f618f259f8191bcda3c2b9e",
+    "val_descriptors": "0472552d4a3933a806009d8c87223cb4ba19beff67328f473bca0d1895c58aee"
+  },
+  "notes": "Checkpoint inference only; no retraining. Notebook canonicalizes to isomeric SMILES. Sequences >2000 or SMILES >200 are excluded per arXiv S1.8; unknown tokens excluded. Output scale of checkpoint unconfirmed.",
+  "output_sha256": {
+    "BDB2020+-predictions.csv": "38ab4153cc450142b9f74dffb4f2c18bf4d43fca92356d27aeb967bcf2b24eb8",
+    "results.json": "603cbc4f6fe9b53f9a42cba33fda41a4987ec9f20a65195807368b131d23577a",
+    "test-predictions.csv": "4611dba57632dd52fe94e1584119bf278b2ffd361ea1e758c8b4aec5397ac932",
+    "val-predictions.csv": "fa87ebff7153be20b0240a61e28cd83e57e2fd183fbad3ca99fa94464f85499f"
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "rdkit": "2026.03.6",
+  "script_sha256": "761e37b314a6419fa9c86d3009f89b8ce48bb55e27195ffe8a759144d36b7222",
+  "source_commit": "cc363f80a6a696d562f290a87aa20173e60f6c52",
+  "source_files_sha256": {
+    "deepdta_retrain.pt": "f4ff2379c6ae98fe711327f24f201c58e1dbc106635ca5d409041a8ae040c4bc",
+    "ligand_dict.json": "ab98e7f2d2a8617728f204b2d064cb7ec0395d43b94e596e4d79a08d1a17f494",
+    "model.py": "58713391df993d12e18617d033d9ee9030bb8f896a0511e9e546570081f843e1",
+    "protein_dict.json": "2d5a6cc0579dc829e13882c5118dc7da0221bb20c474e12b9447b226550eb4c0"
+  },
+  "torch": "2.13.0"
+}

@@ -1,0 +1,25 @@
+{
+  "input_sha256": {
+    "bdb": "9c1aa1e8e32852a267bf2bfa1955bd88347aae3474e2da54e9011bac73e8fe7a",
+    "metadata": "7bb4e54e66c0c58ab74263edb8c2a2d677c2474cfc4ae4dec1eb31a231b10f8a",
+    "test_descriptors": "0ee43071d2d811c2f5b9d5b55ca6909caf0efd92598c59682fc3f119d93f0dca",
+    "train_descriptors": "8a250eea5b4368a4b38913cde7253af14087b46e3f618f259f8191bcda3c2b9e",
+    "val_descriptors": "0472552d4a3933a806009d8c87223cb4ba19beff67328f473bca0d1895c58aee"
+  },
+  "notes": "Checkpoint inference only; no retraining. Notebook canonicalizes to isomeric SMILES. Notebook inference with single records: overlength inputs retained without truncation; unknown tokens excluded. This differs from training-length criteria in S1.8. Output scale of checkpoint unconfirmed.",
+  "output_sha256": {
+    "BDB2020+-predictions.csv": "fe3fb9e21148071dd9994b4ad018c3b0abc384a42095bd538eed89163f5e62c4",
+    "results.json": "887e393c07402302626fe022fc5937e01699ee1761ccc41e65ac71b519cb4bc5"
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "rdkit": "2026.03.6",
+  "script_sha256": "7e39cb469a2d8765905026b24e8b6560e4d18d6cbbda29a9b1c11a9aee375625",
+  "source_commit": "cc363f80a6a696d562f290a87aa20173e60f6c52",
+  "source_files_sha256": {
+    "deepdta_retrain.pt": "f4ff2379c6ae98fe711327f24f201c58e1dbc106635ca5d409041a8ae040c4bc",
+    "ligand_dict.json": "ab98e7f2d2a8617728f204b2d064cb7ec0395d43b94e596e4d79a08d1a17f494",
+    "model.py": "58713391df993d12e18617d033d9ee9030bb8f896a0511e9e546570081f843e1",
+    "protein_dict.json": "2d5a6cc0579dc829e13882c5118dc7da0221bb20c474e12b9447b226550eb4c0"
+  },
+  "torch": "2.13.0"
+}

@@ -1,0 +1,236 @@
+{
+  "BDB2020+": {
+    "evaluated_count": 93,
+    "excluded": [
+      {
+        "id": "7OTY",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7CA8",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7YGQ",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7LMF",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7TEK",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7L11",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7L14",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7M8M",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7M91",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7N44",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7M8P",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7LTN",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7S3K",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7S3S",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7LBS",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7LOS",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7LLZ",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7LLF",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7LBR",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7RN1",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7VVP",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "7NA3",
+        "reasons": [
+          "unknown protein token:  "
+        ]
+      }
+    ],
+    "input_count": 115,
+    "label_mean": 7.782810784317443,
+    "pearson": 0.24404411950022217,
+    "prediction_mean": 7.724350949769379,
+    "rmse_298k_energy_equivalent_if_p_affinity": 1.831403639637782,
+    "rmse_assuming_prediction_p_affinity": 1.342428182765153,
+    "spearman": 0.2938113186016935
+  },
+  "test": {
+    "evaluated_count": 2162,
+    "excluded": [
+      {
+        "id": "1L5Q",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "1L5R",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "1L5S",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "1L7X",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "3A2C",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "3KR4",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "4R6T",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "4R76",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "4R7M",
+        "reasons": [
+          "sequence >2000"
+        ]
+      }
+    ],
+    "input_count": 2171,
+    "label_mean": 6.505675300647549,
+    "pearson": 0.43283886716443476,
+    "prediction_mean": 6.200614802491103,
+    "rmse_298k_energy_equivalent_if_p_affinity": 2.445029373641092,
+    "rmse_assuming_prediction_p_affinity": 1.7922189668213204,
+    "spearman": 0.39440383256113515
+  },
+  "val": {
+    "evaluated_count": 956,
+    "excluded": [
+      {
+        "id": "3KR5",
+        "reasons": [
+          "sequence >2000"
+        ]
+      },
+      {
+        "id": "4K3N",
+        "reasons": [
+          "sequence >2000"
+        ]
+      }
+    ],
+    "input_count": 958,
+    "label_mean": 6.697186192468619,
+    "pearson": 0.46322729970025633,
+    "prediction_mean": 6.747704194180637,
+    "rmse_298k_energy_equivalent_if_p_affinity": 2.2679762557814858,
+    "rmse_assuming_prediction_p_affinity": 1.662438130900199,
+    "spearman": 0.44372862086304826
+  }
+}

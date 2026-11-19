@@ -12,8 +12,10 @@ I am reproducing the RF-Score experiments in your LP-PDBBind paper. Thank you fo
 2. The released RF notebook fits the CSV's p-affinity values, while the tables give kcal/mol. What conversion and temperature were used to calculate the reported RMSEs?
 3. Table 3 uses the best model on BDB2020+. Which metric determined the best initialization, and were all reported target results produced by that one model?
 4. The released Mpro metadata include `pKa_reliable` and `pKa_full`. Which labels and sample IDs were used in Table 3? Are the EGFR `value` column and all 23 released IDs the corresponding inputs?
-5. For DeepDTA, how were sequences longer than the notebook’s nominal 2,000 residues handled? Our preliminary scan found nine such sequences in the released internal test cohort.
-6. Are the split membership lists, prepared structure files or checksums, and per-complex predictions used for the reported tables available? These would help us distinguish data preparation and sample differences from implementation differences.
+5. For DeepDTA on BDB2020+, which protein sequences and sample IDs were used? The preprint supplement describes a 2,000-residue training limit, while the prediction notebook can accept longer sequences. Some released BDB2020+ sequence fields contain viral polyproteins rather than just the structured chain, and we find that applying the length filter changes the comparison substantially. Was the evaluated sequence the full released sequence, a structural chain, or another representation?
+6. For Vina, the arXiv supplement describes optimizing six scoring terms, whereas the released `get_weight_with_rep` code appears to fix the rotation weight and optimize five. Which procedure produced the reported parameters?
+7. For IGN, are the prepared 10 Å pocket/graph inputs, preprocessing code, eligible complex IDs, and all three trained checkpoints available? These would help us reproduce the reported cohort and preprocessing.
+8. Are the split membership lists, prepared structure files or checksums, and per-complex predictions used for the reported tables available? These would help us distinguish data preparation and sample differences from implementation differences.
 
 We recognize that some of these materials may no longer be available. Any clarification you can provide would be very helpful. We would be happy to share our scripts and comparisons.
 
