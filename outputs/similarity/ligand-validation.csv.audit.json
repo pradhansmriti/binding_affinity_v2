@@ -1,0 +1,24 @@
+{
+  "method": "radius-2/4/10 1024-bit Morgan and Dice, canonical SMILES collision correction",
+  "rdkit": "2026.03.6",
+  "source_metadata_sha256": "7bb4e54e66c0c58ab74263edb8c2a2d677c2474cfc4ae4dec1eb31a231b10f8a",
+  "train_ids_sha256": "aaef054515cd5163a2c827b8ca9a14b07dfbd764f0164f5a1eb8a719d14292c6",
+  "query_ids_sha256": "315df03d5f7b452ad3135c8c801cd98793760bb98c85c69b93cd6a666ed042fc",
+  "output_sha256": "2fc5b9fcc7752cc33ba988d00b9232cb60862789d29c69bf874440d301f651e2",
+  "training_total": 7393,
+  "training_valid": 7384,
+  "query_total": 958,
+  "invalid_training": [
+    "1wc1",
+    "3mmr",
+    "3nok",
+    "3o8g",
+    "4c71",
+    "4lhm",
+    "4y63",
+    "5n6s",
+    "6n55"
+  ],
+  "invalid_query": [],
+  "note": "Paper-aligned audit; historical software and input provenance not established."
+}
